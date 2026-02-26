@@ -25,6 +25,6 @@ calArea <- function(poligono, unidad){
   } else if (unidad == 'm2'){
     return (as.numeric(area_m2))
   } else {
-    return("ERROR. Unidad de medida incorrecta, sólo acepta 'ha' y 'm2'")
+    return("ERROR. Unidad de medida incorrecta, solo acepta 'ha' y 'm2'")
   }
 }
