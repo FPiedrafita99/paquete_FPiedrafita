@@ -1,8 +1,8 @@
-Package: paquete2
-Title: What the Package Does (One Line, Title Case)
+Package: AreaCalculator
+Title: Calcula el area de un polígono en hectáreas o metros cuadrados
 Authors@R: 
     person("Fernando", "Piedrafita", , "759415@unizar.es", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: Calcula el area de un objeto espacial. Se puede seleccionar si se quiere el área en metros cuadrados o en hectáreas.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
