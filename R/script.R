@@ -1,23 +1,21 @@
 #' Placeholder
 #'
-#' \code{calHA} calcula el area en hectáreas de un polígono
+#' \code{calArea} calcula el area de un poligono en metros cuadrados o hectáreas
 #'
-#' @param poligono un objeto espacial
-#'
+#' @param poligono un objeto espacial sf
+#' @param unidad unidad de medida en la que se quiera obtener el area
 #'
 #' @return El area del polígono en hectáreas
-#'@importFrom sf st_area
+#' @importFrom sf st_area
 #'
 #' @examples
-#'
-#'
-#'
-#'
+#' poligono <- st_polygon(list(cbind(c(6, 10, 10, 6, 6), c(6, 6, 10, 10, 6))))
+#' calHA(poligono)
 #' @export
 
-calHA <- function(poligono){
+calArea <- function(poligono, unidad){
   area_m2 <- sf::st_area(poligono)
-  hectareas <- area_m2 / 10000
+  hectareas <- as.numeric(area_m2 / 10000)
   return(hectareas)
 }
 
