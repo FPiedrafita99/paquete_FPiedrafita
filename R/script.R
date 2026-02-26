@@ -1,12 +1,12 @@
 #' Placeholder
 #'
-#' \code{nombre-funcion} placeholder
+#' \code{calHA} calcula el area en hectáreas de un polígono
 #'
-#' @param x un objeto con valores numéricos
-#' @param y un objeto con valores numéricos de la misma clase que x
+#' @param poligono un objeto espacial
 #'
-#' @return valores numéricos del índice
 #'
+#' @return El area del polígono en hectáreas
+#'@importFrom sf st_area
 #'
 #' @examples
 #'
@@ -15,5 +15,10 @@
 #'
 #' @export
 
+calHA <- function(poligono){
+  area_m2 <- sf::st_area(poligono)
+  hectareas <- area_m2 / 10000
+  return(hectareas)
+}
 
 
